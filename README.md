@@ -104,7 +104,7 @@ bijection_experiment.py
 ## Usage
 
 ```bash
-python bijection_experiment.py
+python main.py
 ```
 
 ### Hyperparameters
