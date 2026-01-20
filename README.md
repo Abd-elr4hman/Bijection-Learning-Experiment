@@ -74,19 +74,6 @@ This differs from the original paper's results where Transformers achieved ~0.00
 2. The LSTM's recurrent state is well-suited for this elimination-tracking task
 3. The task size (N=20) may favor RNN's sequential processing
 
-## Key Findings (from the original paper)
-
-The original paper found that Transformers dramatically outperform MLPs because:
-
-1. **Attention can track "used" elements** — self-attention naturally learns to look back and identify which B values have been assigned
-2. **Residual streams as belief state** — posterior information accumulates layer-by-layer
-3. **Feed-forward networks perform Bayesian updates** — FFNs do the numerical posterior computation
-4. **Attention provides content-addressable routing** — QK geometry retrieves relevant components for each update
-
-Transformers achieved ~0.003 bit MAE from Bayesian optimal, while MLPs failed catastrophically with errors hundreds of times higher.
-
-I also test RNNs (LSTMs) to see how they compare. They have recurrent state but lack attention — so they should land somewhere between Transformers and MLPs.
-
 ## Code Structure
 
 ```
@@ -117,15 +104,6 @@ python main.py
 | D_MODEL                | 64      | Embedding dimension |
 | NUM_LAYERS_TRANSFORMER | 4       | Transformer depth   |
 | NUM_LAYERS_RNN         | 3       | LSTM depth          |
-
-## Output
-
-The script produces:
-
-1. Training loss curves for all three models
-2. Entropy comparison plot (model entropy vs Bayesian optimal)
-3. Error bar chart showing deviation from Bayesian at each step
-4. MAE scores for each architecture
 
 ## Technical Notes
 
