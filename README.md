@@ -96,14 +96,14 @@ python main.py
 
 ### Hyperparameters
 
-| Parameter              | Default | Description         |
-| ---------------------- | ------- | ------------------- | --- | --- | --- | ---- |
-| N                      | 20      | Bijection size (    | A   | =   | B   | = N) |
-| EPOCHS                 | 50      | Training epochs     |
-| BATCH_SIZE             | 64      | Batch size          |
-| D_MODEL                | 64      | Embedding dimension |
-| NUM_LAYERS_TRANSFORMER | 4       | Transformer depth   |
-| NUM_LAYERS_RNN         | 3       | LSTM depth          |
+| Parameter              | Default | Description                        |
+| ---------------------- | ------- | ---------------------------------- |
+| N                      | 20      | Bijection size (\|A\| = \|B\| = N) |
+| EPOCHS                 | 50      | Training epochs                    |
+| BATCH_SIZE             | 64      | Batch size                         |
+| D_MODEL                | 64      | Embedding dimension                |
+| NUM_LAYERS_TRANSFORMER | 4       | Transformer depth                  |
+| NUM_LAYERS_RNN         | 3       | LSTM depth                         |
 
 ## Technical Notes
 
